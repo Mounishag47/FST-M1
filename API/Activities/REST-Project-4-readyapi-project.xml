@@ -1,71 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="428ba557-5d55-4f73-9381-ad677a5f7333" created="3.61.0" activeEnvironment="Default environment" encryptionMode="Not encrypted" name="JSON Assertion_Activity4" projectVersion="" updated="3.61.0 2025-06-17T10:42:49Z" xmlns:con="http://eviware.com/soapui/config">
+<con:soapui-project id="79abe0f1-ebbc-400d-8ae7-f5428ba13b2c" created="3.64.0" activeEnvironment="Default environment" encryptionMode="Not encrypted" name="REST Project 5" resourceRoot="" projectVersion="" updated="3.64.0 2025-12-11T09:36:10Z" xmlns:con="http://eviware.com/soapui/config">
   <con:settings/>
-  <con:interface xsi:type="con:RestService" id="dd7aeadc-e5a5-420b-80bd-27c33fb7343e" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://petstore.swagger.io" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    <con:settings id="238988cf-931e-428f-836c-c99a323ffca2"/>
+  <con:interface xsi:type="con:RestService" id="31ca934e-c93f-44f7-8df1-4c1527787232" lastUpdated="2026-01-19T08:24:50.175+05:30" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://ipwhois.app" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings id="50184abd-5fc6-420b-a3c1-a22447f62883"/>
     <con:definitionCache type="TEXT" rootPart=""/>
     <con:endpoints>
-      <con:endpoint>https://petstore.swagger.io</con:endpoint>
+      <con:endpoint>http://ipwhois.app</con:endpoint>
     </con:endpoints>
-    <con:resource name="FindByStatus" path="/v2/pet/findByStatus" id="5fbf9244-c6d3-45dc-82c3-e466aa6a69ea">
+    <con:resource name="IP" path="/json/{IP}" id="3b04b2b2-f3a7-4128-aec5-5a85cc6588dc">
       <con:settings/>
       <con:parameters/>
-      <con:method name="FindByStatus" id="c76c22cc-bc4f-427a-b874-eca1187y7817" method="GET">
+      <con:method name="IP" id="ee78ef1e-a32e-4503-abb3-3185dbb6eadc" method="GET">
         <con:settings/>
         <con:parameters>
           <con:parameter required="true">
-            <con:name>status</con:name>
-            <con:value>sold.</con:value>
-            <con:style>QUERY</con:style>
-            <con:default>sold.</con:default>
+            <con:name>IP</con:name>
+            <con:value>IP</con:value>
+            <con:style>TEMPLATE</con:style>
+            <con:default>IP</con:default>
             <con:path xsi:nil="true"/>
             <con:description xsi:nil="true"/>
           </con:parameter>
         </con:parameters>
         <con:representation type="RESPONSE">
-          <con:mediaType>application/json</con:mediaType>
+          <con:mediaType>application/json; charset=utf-8</con:mediaType>
           <con:status>200</con:status>
           <con:params/>
-          <con:element>Response</con:element>
+          <con:element xmlns:json="http://ipwhois.app/json/">json:Response</con:element>
         </con:representation>
-        <con:request name="Request 1" id="c5235508-19fe-4edb-8c58-de4cb8d5291d" mediaType="application/json">
+        <con:request name="Request 1" id="31f9f75f-447b-4f75-b94e-3b27e1881cca" mediaType="application/json">
           <con:settings/>
-          <con:endpoint>https://petstore.swagger.io</con:endpoint>
+          <con:endpoint>http://ipwhois.app</con:endpoint>
           <con:parameters>
-            <con:entry key="status" value="sold."/>
+            <con:entry key="IP" value="IP"/>
           </con:parameters>
           <con:parameterOrder>
-            <con:entry>status</con:entry>
+            <con:entry>IP</con:entry>
           </con:parameterOrder>
         </con:request>
       </con:method>
     </con:resource>
   </con:interface>
-  <con:testSuite id="f7760174-d1ee-41ae-b8f9-5f8877f5938f" name="https://petstore.swagger.io Test Suite">
-    <con:settings id="819dd65f-4a06-4bbc-916c-e319f31c6dbb"/>
+  <con:testSuite id="f487d7f5-b703-4678-bcd5-04457aca6249" name="http://ipwhois.app Test Suite">
+    <con:settings id="5f6d19b8-18d5-428d-a4cc-8cbc45d443de"/>
     <con:runType>SEQUENTIAL</con:runType>
-    <con:testCase id="3c80cc63-d2f3-4457-9f72-2c16fed084fa" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="JSON Assertion_Activity4" searchProperties="true" timeout="0">
+    <con:testCase id="81eb4b35-9e15-4b69-840d-7eeee09f7ecb" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="http://ipwhois.app Test Case 1" searchProperties="true" timeout="0">
       <con:settings/>
-      <con:testStep type="restrequest" name="Request 1" id="532dab8e-be19-41e4-95fa-c2574d7b302e">
+      <con:testStep type="datasource" name="Data Source" id="2d7be90e-ea00-4b29-8b3b-048295f2b287">
         <con:settings/>
-        <con:config service="https://petstore.swagger.io" resourcePath="/v2/pet/findByStatus" methodName="FindByStatus" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-          <con:restRequest name="Request 1" id="c5235508-19fe-4edb-8c58-de4cb8d5291d" mediaType="application/json">
+        <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:dataSource type="File">
+            <con:configuration>
+              <fileName>C:/Users/003RW9744/Desktop/Test.txt</fileName>
+              <separator>,</separator>
+              <trim>true</trim>
+              <charset>UTF-8</charset>
+              <quotedValues>false</quotedValues>
+            </con:configuration>
+          </con:dataSource>
+          <con:shared>true</con:shared>
+          <con:restartShared>true</con:restartShared>
+          <con:property>address</con:property>
+          <con:restartOnRun>true</con:restartOnRun>
+          <con:stopDatasourceExhausted>false</con:stopDatasourceExhausted>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Request 1" id="16414623-747f-4ab8-8b8a-eac9025c722b">
+        <con:settings/>
+        <con:config service="http://ipwhois.app" resourcePath="/json/{IP}" methodName="IP" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Request 1" id="31f9f75f-447b-4f75-b94e-3b27e1881cca" mediaType="application/json">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
             </con:settings>
-            <con:endpoint>https://petstore.swagger.io</con:endpoint>
+            <con:endpoint>http://ipwhois.app</con:endpoint>
             <con:request/>
-            <con:originalUri>https://petstore.swagger.io/v2/pet/findByStatus</con:originalUri>
-            <con:assertion type="Valid HTTP Status Codes" id="4d24c0d1-0c3f-46a0-98ac-f8c6f90de0f4" name="Valid HTTP Status Codes">
+            <con:originalUri>http://ipwhois.app/json/</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="069277b4-0de8-470c-8236-627a6f9bc7a6" name="Valid HTTP Status Codes">
               <con:settings/>
               <con:configuration>
                 <codes>200</codes>
               </con:configuration>
             </con:assertion>
-            <con:assertion type="JsonPath Match" id="24a99b26-1f4e-4c42-989f-a7a8813de7f5" name="JSONPath Match">
+            <con:assertion type="JsonPath Match" id="512d7aaa-29c0-4ab5-8d84-26ddf9c13ffb" name="JSONPath Match">
               <con:configuration>
-                <path>$[0].['id']</path>
-                <content>9223372036854754450</content>
+                <path>$['country']</path>
+                <content>"India"</content>
                 <allowWildcards>false</allowWildcards>
                 <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
                 <ignoreComments>false</ignoreComments>
@@ -77,12 +96,20 @@
             </con:credentials>
             <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
             <con:parameters>
-              <con:entry key="status" value="sold"/>
+              <con:entry key="IP" value="${DataSource#address}"/>
             </con:parameters>
             <con:parameterOrder>
-              <con:entry>status</con:entry>
+              <con:entry>IP</con:entry>
             </con:parameterOrder>
           </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="datasourceloop" name="Data Source Loop" id="2561c47b-c501-4831-952c-70bb9f06107b">
+        <con:settings/>
+        <con:config>
+          <dataSourceStep>Data Source</dataSourceStep>
+          <targetStep>Request 1</targetStep>
+          <discardResults>true</discardResults>
         </con:config>
       </con:testStep>
       <con:properties/>
