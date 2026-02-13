@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="dc68a5f3-ee1a-4e77-a7e6-6144a672cbfa" created="3.61.0" activeEnvironment="Default environment" encryptionMode="Not encrypted" name="Activity6_JDBC" projectVersion="" updated="3.61.0 2025-06-17T10:42:49Z" xmlns:con="http://eviware.com/soapui/config">
+<con:soapui-project id="41fed5a6-c9ab-48b3-88a3-304c4cbe05a2" created="3.64.0" activeEnvironment="Default environment" encryptionMode="Not encrypted" name="REST Project 7" projectVersion="" updated="3.64.0 2025-12-11T09:36:10Z" xmlns:con="http://eviware.com/soapui/config">
   <con:settings/>
-  <con:interface xsi:type="con:RestService" id="500dd00b-ff7c-412e-a337-b9e3a9947f92" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://ipwhois.app" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    <con:settings id="41e3ccc9-2df9-447c-88a9-fa5a04d7ff23"/>
-    <con:definitionCache/>
+  <con:interface xsi:type="con:RestService" id="4df78e55-1a5a-4dc6-b87a-99b3b876cba8" lastUpdated="2026-01-19T08:47:23.183+05:30" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://ipwhois.app" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings id="b32716e6-4b0e-47fc-9e2b-a7add021a129"/>
+    <con:definitionCache type="TEXT" rootPart=""/>
     <con:endpoints>
       <con:endpoint>http://ipwhois.app</con:endpoint>
     </con:endpoints>
-    <con:resource name="IP" path="/json/{IP}" id="47aa2dcb-70bf-4b06-9fc5-c625fe17a51f">
+    <con:resource name="IP" path="/json/{IP}" id="b4780e89-96f3-4fb3-8b8e-76f48adfc03c">
       <con:settings/>
       <con:parameters/>
-      <con:method name="IP" id="b10449a2-6687-4fc1-a496-3461c3c26b3e" method="GET">
+      <con:method name="IP" id="cd8a34a6-ff8e-40cf-a778-56124ba4fb32" method="GET">
         <con:settings/>
         <con:parameters>
           <con:parameter required="true">
@@ -26,9 +26,9 @@
           <con:mediaType>application/json; charset=utf-8</con:mediaType>
           <con:status>200</con:status>
           <con:params/>
-          <con:element xmlns:ns="http://ipwhois.app/json/144.54.7.148">ns:Response</con:element>
+          <con:element xmlns:ns="http://ipwhois.app/json/214.89.4.35">ns:Response</con:element>
         </con:representation>
-        <con:request name="Request 1" id="4e1c2a13-4e9d-4cd1-9c95-34af747bf699" mediaType="application/json">
+        <con:request name="Request 1" id="d7c3083e-6741-4873-b673-4316e658345e" mediaType="application/json">
           <con:settings/>
           <con:endpoint>http://ipwhois.app</con:endpoint>
           <con:parameters>
@@ -41,12 +41,12 @@
       </con:method>
     </con:resource>
   </con:interface>
-  <con:testSuite id="4bf74721-05cb-4c40-9ded-067931189bfa" name="http://ipwhois.app Test Suite">
-    <con:settings id="dc3f0a14-b19d-46f8-b8f3-a060ab9341d1"/>
+  <con:testSuite id="10bedf71-5b2d-4904-93c5-f06e34fa8d8f" name="http://ipwhois.app Test Suite">
+    <con:settings id="52e336ec-7947-494d-9cb2-0350f8f59bb3"/>
     <con:runType>SEQUENTIAL</con:runType>
-    <con:testCase id="6f882f4d-073e-457f-99af-381956aef2d0" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Activity6TestCase" searchProperties="true" timeout="0">
+    <con:testCase id="932abcf7-2816-4d63-8d9d-3300fb46bad2" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="http://ipwhois.app Test Case 1" searchProperties="true" timeout="0">
       <con:settings/>
-      <con:testStep type="datasource" name="DataSource" id="4717a480-9b34-4672-9f12-f5fba1a8759f">
+      <con:testStep type="datasource" name="Data Source" id="b8242208-a0b7-493d-acaf-482d61134456">
         <con:settings/>
         <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:dataSource type="Data Generator">
@@ -55,34 +55,43 @@
               <generatorsTotalNumber>1</generatorsTotalNumber>
               <lastSelectedProperty>0</lastSelectedProperty>
               <GeneratorType0>COMP</GeneratorType0>
-              <PropertyName0>ipAddress</PropertyName0>
-              <repetitionCountipAddress>0</repetitionCountipAddress>
-              <repeatValuesipAddress>false</repeatValuesipAddress>
-              <ComputerAddressTypeipAddress>IPv4</ComputerAddressTypeipAddress>
+              <PropertyName0>address</PropertyName0>
+              <repetitionCountaddress>0</repetitionCountaddress>
+              <repeatValuesaddress>false</repeatValuesaddress>
+              <ComputerAddressTypeaddress>IPv4</ComputerAddressTypeaddress>
               <escapeSpaceSequence/>
             </con:configuration>
           </con:dataSource>
-          <con:shared>true</con:shared>
-          <con:restartShared>true</con:restartShared>
-          <con:property>ipAddress</con:property>
+          <con:shared>false</con:shared>
+          <con:restartShared>false</con:restartShared>
+          <con:property>address</con:property>
           <con:restartOnRun>true</con:restartOnRun>
           <con:stopDatasourceExhausted>false</con:stopDatasourceExhausted>
         </con:config>
       </con:testStep>
-      <con:testStep type="restrequest" name="GetIp" id="867267e2-697f-4df1-b99f-47a8687ebee1">
+      <con:testStep type="restrequest" name="Request 1" id="fbf41f25-2851-4b60-8e45-458d2df6d781">
         <con:settings/>
         <con:config service="http://ipwhois.app" resourcePath="/json/{IP}" methodName="IP" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-          <con:restRequest name="GetIp" id="4e1c2a13-4e9d-4cd1-9c95-34af747bf699" mediaType="application/json">
+          <con:restRequest name="Request 1" id="d7c3083e-6741-4873-b673-4316e658345e" mediaType="application/json">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
             </con:settings>
             <con:endpoint>http://ipwhois.app</con:endpoint>
             <con:request/>
-            <con:originalUri>http://ipwhois.app/json/144.54.7.148</con:originalUri>
-            <con:assertion type="Valid HTTP Status Codes" id="86979e49-daf6-4f1c-bd80-94c5bd4d9545" name="Valid HTTP Status Codes">
+            <con:originalUri>http://ipwhois.app/json/214.89.4.35</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="e5ced124-3df1-4a6c-86b8-65040c829c7f" name="Valid HTTP Status Codes">
               <con:settings/>
               <con:configuration>
                 <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Match" id="71842188-ca4f-481b-b166-6d446a172e1c" name="JSONPath Match">
+              <con:configuration>
+                <path>$['country']</path>
+                <content>"United States"</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
               </con:configuration>
             </con:assertion>
             <con:credentials>
@@ -91,7 +100,7 @@
             </con:credentials>
             <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
             <con:parameters>
-              <con:entry key="IP" value="${DataSource#ipAddress}"/>
+              <con:entry key="IP" value="${Data Source#address}"/>
             </con:parameters>
             <con:parameterOrder>
               <con:entry>IP</con:entry>
@@ -99,39 +108,10 @@
           </con:restRequest>
         </con:config>
       </con:testStep>
-      <con:testStep type="datasink" name="Data Sink" id="9b57edid-ffa6-46a7-8cec-818349067547">
-        <con:settings/>
-        <con:config xsi:type="con:DataSinkStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-          <con:dataSink type="JDBC">
-            <con:configuration>
-              <driver>com.mysql.jdbc.Driver</driver>
-              <connstr>jdbc:mysql://db4free.net:3306/fstm1db?user=fstm1db&amp;password=PASS_VALUE</connstr>
-              <pass>6Y6NowPybq</pass>
-              <Connection>Activity6( Default environment )</Connection>
-              <query>INSERT INTO coordinates VALUES (?,?,?);</query>
-              <stored-procedure>false</stored-procedure>
-            </con:configuration>
-          </con:dataSink>
-          <con:properties>
-            <con:property>
-              <con:name>country</con:name>
-              <con:value>${GetIp#Response#$['country']}</con:value>
-            </con:property>
-            <con:property>
-              <con:name>latitude</con:name>
-              <con:value>${GetIp#Response#$['latitude']}</con:value>
-            </con:property>
-            <con:property>
-              <con:name>longitude</con:name>
-              <con:value>${GetIp#Response#$['longitude']}</con:value>
-            </con:property>
-          </con:properties>
-        </con:config>
-      </con:testStep>
-      <con:testStep type="datasourceloop" name="Data Source Loop" id="a3bc2iuf-0d46-4cb9-b4ee-4b235cb525fc">
+      <con:testStep type="datasourceloop" name="Data Source Loop" id="7ec0d15f-7052-4f29-9c6e-c80ec91d14ef">
         <con:settings/>
         <con:config>
-          <dataSourceStep>DataSource</dataSourceStep>
+          <dataSourceStep>Data Source</dataSourceStep>
           <targetStep>Request 1</targetStep>
           <discardResults>true</discardResults>
         </con:config>
@@ -144,15 +124,7 @@
   </con:testSuite>
   <con:properties/>
   <con:wssContainer/>
-  <con:databaseConnectionContainer>
-    <con:databaseConnection>
-      <con:name>Activity6</con:name>
-      <con:driver>com.mysql.jdbc.Driver</con:driver>
-      <con:connectionString>jdbc:mysql://db4free.net:3306/fstm1db?user=fstm1db&amp;password=PASS_VALUE</con:connectionString>
-      <con:password>6Y6NowPybq</con:password>
-      <con:connectionProperties/>
-    </con:databaseConnection>
-  </con:databaseConnectionContainer>
+  <con:databaseConnectionContainer/>
   <con:jmsConnectionContainer/>
   <con:oAuth2ProfileContainer/>
   <con:oAuth1ProfileContainer/>
