@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="b1dc176a-4c1f-43a3-94f5-3f2e90940e50" created="3.61.0" activeEnvironment="Default environment" encryptionMode="Not encrypted" name="REST Project 5" resourceRoot="" projectVersion="" updated="3.61.0 2025-06-17T10:42:49Z" xmlns:con="http://eviware.com/soapui/config">
+<con:soapui-project id="e4a13cb2-ebb0-4721-ba39-d535a88ae095" created="3.64.0" activeEnvironment="Default environment" encryptionMode="Not encrypted" name="REST Project 6" resourceRoot="" projectVersion="" updated="3.64.0 2025-12-11T09:36:10Z" xmlns:con="http://eviware.com/soapui/config">
   <con:settings/>
-  <con:interface xsi:type="con:RestService" id="5b4bcede-dadd-454b-8f56-51c11f2d12c7" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://ipwhois.app" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    <con:settings id="51ae5e1d-f166-42f7-bbde-73318f21ad7c"/>
+  <con:interface xsi:type="con:RestService" id="afed0598-3fc6-4e28-8ec8-15d4f4e27114" lastUpdated="2026-01-19T08:41:44.318+05:30" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://ipwhois.app" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings id="6e020e5e-df5c-4289-a719-6bb3cc8353c9"/>
     <con:definitionCache type="TEXT" rootPart=""/>
     <con:endpoints>
       <con:endpoint>http://ipwhois.app</con:endpoint>
     </con:endpoints>
-    <con:resource name="IP" path="/json/{IP}" id="891de96b-fdfc-44b9-a43a-9d18be524b8b">
+    <con:resource name="IP" path="/json/{IP}" id="3a2c75a0-216c-4d3a-afda-4d7c78c6b370">
       <con:settings/>
       <con:parameters/>
-      <con:method name="IP" id="4583b2be-3899-4c38-8907-6768d2fce076" method="GET">
+      <con:method name="IP" id="dd8f63c9-a2d9-4c48-8467-70471a70b025" method="GET">
         <con:settings/>
         <con:parameters>
           <con:parameter required="true">
@@ -28,7 +28,7 @@
           <con:params/>
           <con:element xmlns:ns="http://ipwhois.app/json/94.127.62.254">ns:Response</con:element>
         </con:representation>
-        <con:request name="Request 1" id="078a61d5-28e4-407c-98b5-e7216b58694a" mediaType="application/json">
+        <con:request name="Request 1" id="ba80a86e-8954-4a8c-9e11-3d8054d0ef28" mediaType="application/json">
           <con:settings/>
           <con:endpoint>http://ipwhois.app</con:endpoint>
           <con:parameters>
@@ -41,17 +41,17 @@
       </con:method>
     </con:resource>
   </con:interface>
-  <con:testSuite id="6fe4380c-93ad-4ae1-8c4e-7d5a00f1590e" name="http://ipwhois.app Test Suite">
-    <con:settings id="3f295858-09e8-48cd-82c2-2f9e55237597"/>
+  <con:testSuite id="7c46b8a7-c01d-4b94-9636-03529433450a" name="http://ipwhois.app Test Suite">
+    <con:settings id="611ddd7f-86e2-471c-a381-0baeb348dd9a"/>
     <con:runType>SEQUENTIAL</con:runType>
-    <con:testCase id="232e64c1-c273-486d-b83d-a2d5eba9daea" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="http://ipwhois.app Test Case 1" searchProperties="true" timeout="0">
+    <con:testCase id="6f87e3f3-0e78-4416-9f66-57b7d7b11694" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="http://ipwhois.app Test Case 1" searchProperties="true" timeout="0">
       <con:settings/>
-      <con:testStep type="datasource" name="DataSource" id="bdo46b34-arec-4038-a987-fb1dcr3d0c81">
+      <con:testStep type="datasource" name="DataSource" id="3ed40b1d-0126-4cbd-9e35-54e009b131c9">
         <con:settings/>
         <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:dataSource type="Excel">
             <con:configuration>
-              <file>C:\Users\AashishMehta/Documents/Testdata.xlsx</file>
+              <file>C:/Users/003RW9744/Desktop/Test.xlsx</file>
               <worksheet/>
               <cell>A2</cell>
               <ignoreEmpty>false</ignoreEmpty>
@@ -61,41 +61,30 @@
           <con:shared>false</con:shared>
           <con:restartShared>false</con:restartShared>
           <con:property>IP Address</con:property>
-          <con:property>City</con:property>
-          <con:property>ExpectedResult</con:property>
           <con:restartOnRun>true</con:restartOnRun>
           <con:stopDatasourceExhausted>false</con:stopDatasourceExhausted>
         </con:config>
       </con:testStep>
-      <con:testStep type="restrequest" name="Request 1" id="cd982fe4-c556-47b9-b94b-c016b235822a">
+      <con:testStep type="restrequest" name="Request 1" id="084a3f53-c92f-4859-94c1-48d457dc6d20">
         <con:settings/>
         <con:config service="http://ipwhois.app" resourcePath="/json/{IP}" methodName="IP" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-          <con:restRequest name="Request 1" id="078a61d5-28e4-407c-98b5-e7216b58694a" mediaType="application/json">
+          <con:restRequest name="Request 1" id="ba80a86e-8954-4a8c-9e11-3d8054d0ef28" mediaType="application/json">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
             </con:settings>
             <con:endpoint>http://ipwhois.app</con:endpoint>
             <con:request/>
             <con:originalUri>http://ipwhois.app/json/94.127.62.254</con:originalUri>
-            <con:assertion type="Valid HTTP Status Codes" id="030fa3dd-6f39-4dd0-9076-365fa63ebf5e" name="Valid HTTP Status Codes">
+            <con:assertion type="Valid HTTP Status Codes" id="f4dd70d6-1f54-4869-8a61-1677ba9aa2a1" name="Valid HTTP Status Codes">
               <con:settings/>
               <con:configuration>
                 <codes>200</codes>
               </con:configuration>
             </con:assertion>
-            <con:assertion type="JsonPath Match" id="b98a103e-09d4-459e-bf24-c419d7cabcaa" name="JSONPath Match" disabled="true">
+            <con:assertion type="JsonPath Match" id="6ce2e890-9c90-4e12-a08c-6b29b808ca0d" name="JSONPath Match">
               <con:configuration>
-                <path>$['country_code']</path>
-                <content>"NO"</content>
-                <allowWildcards>false</allowWildcards>
-                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
-                <ignoreComments>false</ignoreComments>
-              </con:configuration>
-            </con:assertion>
-            <con:assertion type="JsonPath Existence Match" id="19a37113-df53-46de-b26c-203e346b8f9b" name="JSONPath Existence Match">
-              <con:configuration>
-                <path>$['currency_code']</path>
-                <content>true</content>
+                <path>$['country']</path>
+                <content>"Norway"</content>
                 <allowWildcards>false</allowWildcards>
                 <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
                 <ignoreComments>false</ignoreComments>
@@ -115,7 +104,7 @@
           </con:restRequest>
         </con:config>
       </con:testStep>
-      <con:testStep type="datasourceloop" name="Data Source Loop" id="0987ba83-24bf-4ba3-b244-09814fc09512">
+      <con:testStep type="datasourceloop" name="Data Source Loop" id="ccd6b460-4762-4e29-bed3-50078690ffc5">
         <con:settings/>
         <con:config>
           <dataSourceStep>DataSource</dataSourceStep>
@@ -129,7 +118,6 @@
     <con:properties/>
     <con:reportParameters/>
   </con:testSuite>
-  <con:requirements/>
   <con:properties/>
   <con:wssContainer/>
   <con:databaseConnectionContainer/>
